@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #052c43;
+}
+
+.btn-primary,
+.btn-secondary {
+  letter-spacing: 1px;
+  border-radius: 25px;
+  border: 2px solid;
+  font-weight: 600;
+  color: inherit;
+  @apply bg-white  px-8 py-3;
+}
+.btn-primary {
+  @apply bg-slate-950 text-white;
+}
+
+a[active="true"] {
+  @apply text-slate-950 font-medium;
+}
+
+.gallery img {
+  height: 340px;
+  flex: 1;
+  object-fit: cover;
+  scale: 1;
+  transition: scale 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  z-index: 10;
+  scale: 1.05;
+}
+
+.gallery:hover img:not(:hover) {
+  filter: grayscale() blur(1px);
+}

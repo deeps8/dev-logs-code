@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #111827;
+}
+html,
+body {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.step-indicators li {
+  position: relative;
+}
+.step-indicators li:not(:first-of-type) .step-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: calc(50% - 28px);
+  height: 1px;
+  background-color: white;
+}
+
+.step-indicators li:not(:last-of-type) .step-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 28px;
+  width: calc(50% - 28px);
+  height: 1px;
+  background-color: white;
+}
